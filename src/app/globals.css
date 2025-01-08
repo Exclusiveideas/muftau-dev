@@ -1,19 +1,18 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-color: #0D0D0D;
+  --brown-color: #B7AB98;
+  --red-color: #EB5939;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  font-family: "AvGard", sans-serif;
+  background-color: var(--bg-color);
 }
 
 body {
@@ -32,3 +31,24 @@ a {
   text-decoration: none;
 }
  
+
+@font-face {
+  font-family: "AvGard";
+  src: url("/fonts/AVGARDD_2.TTF") format("truetype");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AvGard";
+  src: url("/fonts/AVGARDDO_2.TTF") format("truetype");
+  font-weight: 400; /* Regular */
+  font-style: oblique; /* Oblique style */
+}
+
+@font-face {
+  font-family: "AvGard";
+  src: url("/fonts/AVGARDN_2.TTF") format("truetype");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
