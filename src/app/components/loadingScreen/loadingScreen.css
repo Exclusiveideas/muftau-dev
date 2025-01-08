@@ -9,6 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 999;
 
     background-color: var(--bg-color);
 }
@@ -34,7 +35,6 @@
 
 .circle-bg {
     opacity: 0.3;
-    /* Background circle transparency */
 }
 
 .circle-progress {
@@ -110,6 +110,9 @@
     transition: background-color 0.3s ease-in, color 0.3s ease-in;
     letter-spacing: 2.5px;
     font-weight: bold;
+
+    position: absolute;
+    bottom: 10%;
 }
 
 .startBtn_container:hover {

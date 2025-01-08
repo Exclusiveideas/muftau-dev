@@ -91,11 +91,16 @@ const LoadingScreen = () => {
   }, [loadingScreen])
 
   const closeLoadingScreen = () => {
-    gsap.to(loadingScreenRef?.current, {
+    const tl = gsap.timeline();
+
+    tl.to(loadingScreenRef?.current, {
         opacity: 0,
         duration: .8,
         ease: CustomEase.create("custom", "M0,0 C0.796,0 0.198,1 1,1 ")
-    }) 
+    })
+    .to(loadingScreenRef?.current, {
+        display: 'none'
+    })
   }
   
 
@@ -137,7 +142,7 @@ const LoadingScreen = () => {
           {progress}%
         </p>
         <div ref={deerRef} className="dog-container">
-          <div className={`dog-face ${progress > 99 && "animated"}`}>
+          <div className="dog-face">
             <Image
               src={"/images/dog-img.png"}
               width={80}

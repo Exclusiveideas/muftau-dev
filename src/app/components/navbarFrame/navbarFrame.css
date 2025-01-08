@@ -1,0 +1,127 @@
+.navbarFrame-wrapper {
+    --padding-dist: 4rem; 
+    --inactive-menu-color: #b7ab9886;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    color: var(--brown-color);
+    box-sizing: border-box;
+
+    padding: 4.5rem;
+}
+
+.logo_container {
+    position: absolute;
+    top: calc(var(--padding-dist) - .7rem);
+    left: var(--padding-dist);
+}
+
+
+.dog-container.navbarFrame {
+    width: 80px;
+    height: 80px;
+    background-color: var(--brown-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 100px;
+    /* Adds depth for 3D effect */
+    box-sizing: border-box;
+    overflow: hidden;
+    transform: scale(.6);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
+}
+
+.dog-container.navbarFrame:hover {
+    background-color: var(--red-color);
+}
+
+.dog-face.navbarFrame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.dogImg.navbarFrame {
+    height: max-content;
+    width: 60px;
+}
+
+
+.menu_container {
+    /* border: 1px solid white; */
+    width: max-content;
+    box-sizing: border-box;
+    position: absolute;
+    top: var(--padding-dist);
+    right: var(--padding-dist);
+    display: flex;
+    flex-direction: columns;
+}
+
+.menu-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: .7rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    font-weight: 600;
+    overflow: hidden;
+    cursor: pointer;
+    height: 17px;
+    text-align: right;
+    color: var(--inactive-menu-color);
+}
+
+.menu-item.active {
+    color: var(--brown-color);
+}
+
+.text_innerContainer {
+    transition: all 0.3s cubic-bezier(0.796, 0, 0.198, 1);
+}
+
+.menu-item:hover .text_innerContainer {
+    transform: translateY(-17px);
+    color: var(--brown-color);
+}
+
+.externalLinks_container {
+    width: max-content;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: var(--padding-dist);
+    left: var(--padding-dist);
+    display: flex;
+    flex-direction: columns;
+}
+
+.external-links {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+
+.soundControl_container {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: var(--padding-dist);
+    right: var(--padding-dist);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
