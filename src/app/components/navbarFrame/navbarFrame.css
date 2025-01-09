@@ -11,6 +11,7 @@
     box-sizing: border-box;
 
     padding: 4.5rem;
+    z-index: 95;
 }
 
 .logo_container {

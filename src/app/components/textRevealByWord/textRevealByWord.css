@@ -1,0 +1,35 @@
+.text-reveal-container {
+    position: relative;
+    z-index: 0;
+    height: 100%;
+  }
+  
+  .text-reveal-content {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    height: 50%;
+    max-width: 1200px;
+    background: transparent;
+  }
+  
+  .text-reveal-text {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .word {
+    position: relative;
+    margin-right: 1rem;
+  }
+  
+  .word-background {
+    position: absolute;
+    opacity: 0.2;
+  }
+  
+  .word-visible {
+    position: relative;
+  }
+  
