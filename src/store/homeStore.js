@@ -6,6 +6,7 @@ const useHomeStore = create()((set) => ({
   activeCommentIndex: 0,
   appSectRef: null,
   workContRefs: [],
+  activeMenu: 'about',
   setLoadingScreen: (val) =>
     set(() => ({
       loadingScreen: val,
@@ -25,6 +26,10 @@ const useHomeStore = create()((set) => ({
   addToWorkContRefs: (ref) =>
     set((state) => ({
       workContRefs: [...state.workContRefs, ref],
+    })),
+  setActiveMenu: (section) =>
+    set(() => ({
+      activeMenu: section,
     })),
 }));
 

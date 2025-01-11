@@ -6,7 +6,7 @@ import "./waveAnimation.css";
 import gsap from "gsap";
 import useHomeStore from "@/store/homeStore";
 
-const WaveAnimation = () => {
+const WaveAnimation = ({ setSound }) => {
   const svgRef = useRef(null);
   const lineRef = useRef(null);
   const [isWaving, setIsWaving] = useState(true);
@@ -81,6 +81,15 @@ const WaveAnimation = () => {
       }
     };
   }, [loadingScreen]);
+
+  useEffect(() => {
+    if(isWaving) {
+      setSound(true)
+    } else {
+      setSound(false)
+    }
+  }, [isWaving])
+  
   
 
   const toggleWaveAndMusic = () => {

@@ -99,7 +99,7 @@
     transition: all 0.3s cubic-bezier(0.796, 0, 0.198, 1);
 }
 
-.menu-item:hover .text_innerContainer {
+.menu-item.active .text_innerContainer {
     transform: translateY(-17px);
     color: var(--brown-color);
 }
@@ -129,4 +129,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+    height: 180px;
+    width: 50px;
+}
+
+.soundControl_container p {
+    font-size: .7rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    overflow-y: hidden;
+    text-transform: uppercase;
+    width: max-content;
+    height: max-content;
+    transform: rotate(90deg);
 }
