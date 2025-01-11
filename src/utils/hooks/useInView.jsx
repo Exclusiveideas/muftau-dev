@@ -7,14 +7,14 @@ const useInView = (options = {}) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.8) {
-          setIsInView(true); // Element is 80% in view
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.85) {
+          setIsInView(true); // Element is 85% in view
         } else {
-          setIsInView(false); // Element is not 80% in view
+          setIsInView(false); // Element is not 85% in view
         }
       },
       {
-        threshold: 0.8, // Trigger when 80% of the element is in view
+        threshold: 0.85, // Trigger when 85% of the element is in view
         ...options, // Allow for custom options
       }
     );

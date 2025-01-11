@@ -7,6 +7,8 @@ import { useEffect, useRef } from "react";
 import useHomeStore from "@/store/homeStore";
 import CustomEase from "gsap/CustomEase";
 
+gsap.registerPlugin(CustomEase);
+
 const comments = [
   {
     comment: "A problem-solver who turned our ideas into reality.",

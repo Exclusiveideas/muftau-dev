@@ -13,6 +13,9 @@ const Clients = () => {
             section="clients"
         />
         </div>
+      <div className="WTS-section-intro">
+        <p>What They Said</p>
+      </div>
     </div>
   )
 }

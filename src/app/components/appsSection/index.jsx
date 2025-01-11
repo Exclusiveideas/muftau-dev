@@ -1,5 +1,8 @@
 import Image from "next/image";
 import "./appsSection.css";
+import JellyBlob from "../cursorCircle";
+import { useEffect, useRef } from "react";
+import useHomeStore from "@/store/homeStore";
 
 const works = [
   {
@@ -59,11 +62,21 @@ const works = [
 ]
 
 const AppsSection = () => {
+  const applicationsRef = useRef(null);
+  const setAppSectRef = useHomeStore((state) => state.setAppSectRef);
+  
+  useEffect(() => {
+    if (applicationsRef.current) {
+      setAppSectRef(applicationsRef.current);
+    }
+  }, [applicationsRef, setAppSectRef]);
+
   return (
-    <div className="appsSection-wrapper">
+    <div ref={applicationsRef} className="appsSection-wrapper">
       {works?.map((work, i) => (
         <WorkContainer key={i} work={work} end={i+1 != 1 ? ((i + 1) % 2 == 0 ? true: false) : false}/>
       ))}
+      <JellyBlob />
     </div>
   );
 };
@@ -71,8 +84,17 @@ const AppsSection = () => {
 export default AppsSection;
 
 const WorkContainer = ({work, end}) => {
+  const workContainerRef = useRef(null);
+  const addToWorkContRefs = useHomeStore((state) => state.addToWorkContRefs);
+  
+  useEffect(() => {
+    if (workContainerRef.current) {
+      addToWorkContRefs(workContainerRef.current);
+    }
+  }, [workContainerRef, addToWorkContRefs]);
+
   return (
-    <div className={`workContainer ${end && 'end'}`}>
+    <div ref={workContainerRef} className={`workContainer ${end && 'end'}`}>
       <div className="workImage-wrapper">
         <Image
           src={`/images/works/${work?.image}`}

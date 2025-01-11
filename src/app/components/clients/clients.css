@@ -2,11 +2,12 @@
     --client-bg: #1D1D1D;
 
     width: 100vw;
-    height: 70vh;
+    height: 80vh;
     background-color: var(--client-bg);
     color: var(--brown-color);
     padding-left: var(--padding-left);
-    padding-top: 11rem;
+    padding-top: 10rem;
+    position: relative;
 }
 
 .clients-content-wrapper {
@@ -34,4 +35,19 @@
     letter-spacing: -3px;
     position: relative;
     width: 100%;
+}
+
+
+.WTS-section-intro {
+    position: absolute;
+    bottom: 1.5rem;
+    left: var(--padding-left);
+
+    
+    font-size: .7rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    word-spacing: 10px;
+    overflow-y: hidden;
+    text-transform: uppercase;
 }

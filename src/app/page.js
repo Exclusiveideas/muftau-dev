@@ -13,6 +13,7 @@ import AppsSection from "./components/appsSection";
 import Clients from "./components/clients";
 import WhatTheySaid from "./components/whatTheySaid";
 import Motto from "./components/motto";
+import Contact from "./components/contact";
 
 export default function Home() {
   const loadingScreen = useHomeStore((state) => state.loadingScreen);
@@ -32,9 +33,11 @@ export default function Home() {
         <AppsSection />
         <Clients />
         <WhatTheySaid />
-        <Motto />
       </main>
-      <footer className={styles.footer}></footer>
+      <footer className={styles.footer}>
+        <Motto />
+        <Contact />
+      </footer>
     </div>
   );
 }

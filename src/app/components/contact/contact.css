@@ -1,0 +1,77 @@
+.contact-wrapper {
+
+    width: 100vw;
+    height: 50vh;
+    background-color: var(--bg-color);
+    color: var(--brown-color);
+    padding-left: var(--padding-left);
+    padding-top: 8rem;
+    position: relative;
+    padding-right: 7rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contactSection-name {
+    font-size: .9rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    word-spacing: 10px;
+    overflow-y: hidden;
+    text-transform: uppercase;
+    z-index: 4;
+}
+
+.connection-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 1rem;
+    column-gap: 2rem;
+}
+
+.connection-sites {
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    display: flex;
+    gap: 1rem;
+    /* border: 1px solid white; */
+}
+
+.contact-indicatorIcon {
+    width: 13px;
+    height: max-content;
+    transform: rotate(115deg);
+    margin-top: .5rem;
+}
+
+.conection-links {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    letter-spacing:1px;
+
+}
+
+.conection-links .key {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.conection-links .value {
+    font-size: 12px;
+    color: #b7ab988e;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    text-decoration: none;
+}
+
+
+.conection-links .value:hover {
+    color: var(--brown-color);
+    text-decoration: underline;
+}
