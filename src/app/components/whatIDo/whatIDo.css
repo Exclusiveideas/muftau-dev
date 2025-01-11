@@ -2,7 +2,58 @@
     width: 100vw;
     height: 100vh;
     display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: var(--brown-color);
+    box-sizing: border-box;
+    position: relative;
+}
+
+.whatIDo-bgImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--brown-color);
+    z-index: 2;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.planetImg {
+    width: max-content;
+    height: 100%;
+}
+
+.whatIDo-contentWrapper {
+    width: 100%;
+    padding-top: 5rem;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    z-index: 5;
+}
+
+
+.whatIDo-section-name {
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    word-spacing: 10px;
+    overflow-y: hidden;
+    text-transform: uppercase;
+    padding-left: var(--padding-left);
+}
+
+
+.textsContainer {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0;
 }

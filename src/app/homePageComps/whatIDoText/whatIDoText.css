@@ -1,0 +1,36 @@
+
+.whatIDoText-wrapper {
+    --border-color: #b7ab982f;
+
+
+    text-transform: uppercase;
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 95%;
+    letter-spacing: -3px;
+    border-top: .5px solid var(--border-color);
+    border-bottom: .5px solid var(--border-color);
+    padding-left: var(--padding-left);
+    position: relative;
+    height: 6.5rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    text-wrap: nowrap;
+}
+
+
+.whatIDo-word-background {
+    position: absolute;
+    opacity: 0.2;
+    padding: .7rem 0;
+}
+
+.whatIDo-word-visible {
+    /* border: 1px solid white; */
+    /* width: 50%; */
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 100%;
+    padding: .7rem 0;
+}

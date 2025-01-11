@@ -10,9 +10,9 @@ import {
 } from "../icons/icons";
 import WaveAnimation from "../waveAnimation";
 
-const NavbarFrame = () => {
-  return (
-    <div className="navbarFrame-wrapper">
+export const NavbarFrameLeft = () => {
+  return ( 
+    <div className="navbarFrame-wrapper left">
       <div className="logo_container">
         <div className="dog-container navbarFrame">
           <div className="dog-face navbarFrame">
@@ -25,6 +25,25 @@ const NavbarFrame = () => {
             />
           </div>
         </div>
+      </div>
+      <div className="externalLinks_container">
+        <div className="external-links">
+          <MediumIcon />
+          <TwitterIcon />
+          <GitHubIcon />
+          <LinkedInIcon />
+        </div>
+      </div>
+    </div>
+  )
+};
+
+
+export const NavbarFrameRight = () => {
+  return (
+    <div className="navbarFrame-wrapper right">
+      <div className="soundControl_container">
+        <WaveAnimation />
       </div>
       <div className="menu_container">
         <ol className="menu-items">
@@ -48,19 +67,6 @@ const NavbarFrame = () => {
           </li>
         </ol>
       </div>
-      <div className="externalLinks_container">
-        <div className="external-links">
-          <MediumIcon />
-          <TwitterIcon />
-          <GitHubIcon />
-          <LinkedInIcon />
-        </div>
-      </div>
-      <div className="soundControl_container">
-        <WaveAnimation />
-      </div>
     </div>
-  )
+  );
 };
-
-export default NavbarFrame;

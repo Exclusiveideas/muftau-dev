@@ -1,10 +1,5 @@
-import gsap from "gsap";
 import "./aboutSection.css";
-
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import TextRevealByWord from "../textRevealByWord";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const AboutSection = () => {
 
@@ -15,6 +10,7 @@ const AboutSection = () => {
         <TextRevealByWord
           text="I'm a selectively skilled software developer with a strong focus on producing high quality & impactful digital solutions."
           className="overlayText"
+          section='about'
         />
       </div>
     </div>

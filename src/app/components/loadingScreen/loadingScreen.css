@@ -105,7 +105,6 @@
     justify-content: center;
     opacity: 0;
     outline: none;
-    /* pointer-events: none; */
     text-transform: uppercase;
     transition: background-color 0.3s ease-in, color 0.3s ease-in;
     letter-spacing: 2.5px;

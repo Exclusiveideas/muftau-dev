@@ -1,7 +1,82 @@
+
+@font-face {
+  font-family: "AvGard";
+  src: url("/fonts/avgard/AVGARDD_2.TTF") format("truetype");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AvGard";
+  src: url("/fonts/avgard/AVGARDDO_2.TTF") format("truetype");
+  font-weight: 400; /* Regular */
+  font-style: oblique; /* Oblique style */
+}
+
+@font-face {
+  font-family: "AvGard";
+  src: url("/fonts/avgard/AVGARDN_2.TTF") format("truetype");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'Neue';
+  src: url('/fonts/neue/NeueHaasDisplayBlack.ttf') format('truetype');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Neue';
+  src: url('/fonts/neue/NeueHaasDisplayBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue';
+  src: url('/fonts/neue/NeueHaasDisplayXXThin.ttf') format('truetype');
+  font-weight: 100; /* XXThin */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue';
+  src: url('/fonts/neue/NeueHaasDisplayXThin.ttf') format('truetype');
+  font-weight: 200; /* XThin */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue';
+  src: url('/fonts/neue/NeueHaasDisplayThin.ttf') format('truetype');
+  font-weight: 300; /* Thin */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue';
+  src: url('/fonts/neue/NeueHaasDisplayLight.ttf') format('truetype');
+  font-weight: 400; /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue';
+  src: url('/fonts/neue/NeueHaasDisplayMedium.ttf') format('truetype');
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+
+
 :root {
   --bg-color: #0D0D0D;
   --brown-color: #B7AB98;
   --red-color: #EB5939;
+  --padding-left: 15rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,6 +88,7 @@ body {
   overflow-x: hidden;
   font-family: "AvGard", sans-serif;
   background-color: var(--bg-color);
+  color: var(--brown-color);
 }
 
 body {
@@ -31,24 +107,3 @@ a {
   text-decoration: none;
 }
  
-
-@font-face {
-  font-family: "AvGard";
-  src: url("/fonts/AVGARDD_2.TTF") format("truetype");
-  font-weight: 400; /* Regular */
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "AvGard";
-  src: url("/fonts/AVGARDDO_2.TTF") format("truetype");
-  font-weight: 400; /* Regular */
-  font-style: oblique; /* Oblique style */
-}
-
-@font-face {
-  font-family: "AvGard";
-  src: url("/fonts/AVGARDN_2.TTF") format("truetype");
-  font-weight: 700; /* Bold */
-  font-style: normal;
-}

@@ -1,0 +1,11 @@
+
+.motto-wrapper {
+    --client-bg: #1D1D1D;
+
+    width: 100vw;
+    height: 90vh;
+    background-color: var(--client-bg);
+    color: var(--brown-color);
+    padding-left: var(--padding-left);
+    padding-top: 11rem;
+}
