@@ -87,14 +87,30 @@ const WorkContainer = ({work, end}) => {
   const workContainerRef = useRef(null);
   const addToWorkContRefs = useHomeStore((state) => state.addToWorkContRefs);
   
+  const dropAudioRef = useRef(null); 
+  
   useEffect(() => {
     if (workContainerRef.current) {
       addToWorkContRefs(workContainerRef.current);
     }
+    if (dropAudioRef?.current) {
+      dropAudioRef.current.volume = 0.4;
+    }
   }, [workContainerRef, addToWorkContRefs]);
+  
+  const playDropSound = () => {
+    if (dropAudioRef?.current) {
+      dropAudioRef.current.play();
+    }
+  };
+
 
   return (
-    <div ref={workContainerRef} className={`workContainer ${end && 'end'}`}>
+    <div ref={workContainerRef} onMouseEnter={playDropSound} className={`workContainer ${end && 'end'}`}>
+      <audio
+      ref={dropAudioRef}
+      src="/sfx/drop.mp3"
+    />
       <div className="workImage-wrapper">
         <Image
           src={`/images/works/${work?.image}`}

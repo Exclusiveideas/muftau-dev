@@ -6,7 +6,6 @@
     top: 0;
     width: max-content;
     height: 100vh;
-    color: var(--brown-color);
     box-sizing: border-box;
     z-index: 95;
 }
@@ -23,6 +22,12 @@
     position: absolute;
     top: calc(var(--padding-dist) - .7rem);
     left: 0;
+    cursor: pointer;
+    /* width: max-content; */
+    padding: 1rem;
+    
+    /* border: 1px solid white; */
+    transform: scale(.6);
 }
 
 
@@ -31,6 +36,7 @@
     height: 80px;
     background-color: var(--brown-color);
     border-radius: 50%;
+    /* border: 1px solid white; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,12 +44,10 @@
     /* Adds depth for 3D effect */
     box-sizing: border-box;
     overflow: hidden;
-    transform: scale(.6);
-    cursor: pointer;
     transition: background-color 0.2s ease-in;
 }
 
-.dog-container.navbarFrame:hover {
+.logo_container:hover .dog-container.navbarFrame {
     background-color: var(--red-color);
 }
 
@@ -118,6 +122,7 @@
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    gap: 1rem;
 }
  
 
@@ -135,6 +140,10 @@
     width: 50px;
 }
 
+.soundControl_container:hover p{
+    color: var(--brown-color);
+}
+
 .soundControl_container p {
     font-size: .7rem;
     font-weight: 600;
@@ -144,4 +153,25 @@
     width: max-content;
     height: max-content;
     transform: rotate(90deg);
+    display: flex;
+    gap: .3rem;
+    color: #b7ab9863;
+    transition: all 0.3s ease-in;
+}
+
+
+.soundControl_container p span {
+    display: block;
+    height: 1rem;
+    transition: all 0.3s ease-in;
+    color: var(--brown-color);
+}
+
+
+.soundControl_container p span.on {
+    transform: translateY(0);
+}
+
+.soundControl_container p span.off {
+    transform: translateY(-100%);
 }
