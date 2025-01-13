@@ -5,14 +5,16 @@ import ProjectOverview from '@/projectPageComponents/projectOverview';
 import Problem from '@/projectPageComponents/problem';
 import Solution from '@/projectPageComponents/solution';
 import Demo from '@/projectPageComponents/demo';
-import Outcome from '@/projectPageComponents/outcome';
-import Reflection from '@/projectPageComponents/reflection';
+import FinalDemo from '@/projectPageComponents/finalDemo';
 import DesignProcess, { DesignProcessCont } from '@/projectPageComponents/designProcess';
 import DevApproach from '@/projectPageComponents/devApproach';
+import { NavbarFrameLeft, NavbarFrameRight } from '../components/navbarFrame';
 
 const Project = () => {
   return (
     <div className='projectPage-wrapper'>
+        <NavbarFrameLeft />
+        <NavbarFrameRight projectPage={true} />
         <TitleSection />
         <ProjectOverview />
         <Problem />
@@ -21,8 +23,7 @@ const Project = () => {
         <Demo />
         <DesignProcessCont />
         <DevApproach />
-        <Outcome />
-        <Reflection />
+        <FinalDemo />
     </div>
   )
 }

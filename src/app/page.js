@@ -50,7 +50,7 @@ export default function Home() {
       <main className={styles.main}>
         <LoadingScreen />
         <NavbarFrameLeft />
-        <NavbarFrameRight />
+        <NavbarFrameRight projectPage={false} />
         <div ref={aboutWrapperRef} className="aboutMeWrapper">
           <HeroSection />
           <AboutSection />

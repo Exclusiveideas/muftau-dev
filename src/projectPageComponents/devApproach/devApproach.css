@@ -5,4 +5,120 @@
     min-height: 100vh;
 
     background-color: var(--bg-color);
+    box-sizing: border-box;
+    
+    padding: var(--page-padding);
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+
+.da-section-label {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    overflow-y: hidden;
+    text-transform: uppercase;
+    position: relative;
+    width: max-content;
+    padding-bottom: .3rem;
+}
+
+.da-underline {
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    height: 1px;
+    background-color: var(--red-color);
+}
+
+
+.da-subsections-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.da-sub-section-label {
+    font-size: .9rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    overflow-y: hidden;
+    /* text-transform: uppercase; */
+    position: relative;
+    width: max-content;
+    padding-bottom: .3rem;
+    margin-left: 2rem;
+}
+
+
+.sub-sect-contentContainer {
+    align-self: center;
+    width: 90%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr minmax(0px, 1fr);
+    gap: 3rem;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+.technology-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.stack-type {
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    overflow-y: hidden;
+    text-transform: uppercase;
+    position: relative;
+    width: max-content;
+}
+
+.stack-desc {
+    font-size: 13px;
+}
+
+.devSteps-desc {
+    font-size: 13px;
+    text-align: left;
+}
+
+
+.devSteps-desc ol {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+
+.optimization-contentContainer {
+    align-self: center;
+    width: 91%;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    box-sizing: border-box;
+}
+
+
+.optimization-contentContainer ol {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
 }

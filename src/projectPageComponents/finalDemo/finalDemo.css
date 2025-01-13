@@ -1,0 +1,69 @@
+
+.finalDemo-wrapper {
+    width: 100%;
+    height: max-content;
+    min-height: 100vh;
+
+    background-color: var(--bg-color);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.fd-image-container {
+    width: 100%;
+    height: 80vh;
+    /* border: 1px solid white; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.demoPlaceholderImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.demo-nextProject {
+    width: 100%;
+    flex: 1;
+    /* border: 1px solid white; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.liveDemo-container {
+    width:  max-content;
+    height: max-content;
+    padding: 1rem 2rem;
+    background-color: var(--brown-color);
+    color: black;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    position: relative;
+}
+
+
+.liveDemo-container:hover {
+    background-color: #9e9689;
+}
+
+.next-project {
+    width:  max-content;
+    height: max-content;
+    padding: 1rem 2rem;
+    background-color: var(--brown-color);
+    color: black;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    position: absolute;
+    right: 3rem;
+}
+
+.next-project:hover {
+    background-color: #9e9689;
+}

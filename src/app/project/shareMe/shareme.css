@@ -1,0 +1,11 @@
+
+.shareme-wrapper {
+    --page-padding: 5rem;
+  
+      width: 100vw;
+      min-height: 100vh;
+      height: max-content;
+      background-color: var(--bg-color);
+      color: var(--brown-color);
+      box-sizing: border-box;
+  }

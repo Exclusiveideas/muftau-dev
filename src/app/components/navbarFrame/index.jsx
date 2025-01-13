@@ -43,8 +43,8 @@ export const NavbarFrameLeft = () => {
   );
 };
 
-export const NavbarFrameRight = () => {
-  const [sound, setSound] = useState(false);
+export const NavbarFrameRight = ({ projectPage }) => {
+  const [sound, setSound] = useState(true);
   const [menuHover, setMenuHover] = useState("");
   const activeMenu = useHomeStore((state) => state.activeMenu);
   const setActiveMenu = useHomeStore((state) => state.setActiveMenu);
@@ -75,7 +75,8 @@ export const NavbarFrameRight = () => {
           </span>
         </p>
       </div>
-      <div className="menu_container">
+      {!projectPage && (
+        <div className="menu_container">
         <ol className="menu-items">
           <li
             onClick={() => goToSection("about")}
@@ -130,6 +131,7 @@ export const NavbarFrameRight = () => {
           </li>
         </ol>
       </div>
+      )}
     </div>
   );
 };
