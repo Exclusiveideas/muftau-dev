@@ -1,0 +1,39 @@
+
+.titleSection-wrapper {
+    width: 100%;
+    height: 55vh;
+    box-sizing: border-box;
+
+    /* border: 1px solid white; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    
+    padding-left: var(--page-padding);
+    padding-right: var(--page-padding);
+}
+
+
+.title-section-label {
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    overflow-y: hidden;
+    text-transform: uppercase;
+}
+
+.projectTitle {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 85%;
+    letter-spacing: -4px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.projectTitle span {
+    color: var(--red-color);
+}

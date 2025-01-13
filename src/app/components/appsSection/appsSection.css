@@ -48,7 +48,7 @@
     justify-content: center;
 }
 
-.workImage-wrapper:hover {
+.workContainer:hover .workImage-wrapper {
     border-radius: 50px;
     transform: scale(.97);
 }

@@ -3,6 +3,7 @@ import "./appsSection.css";
 import JellyBlob from "../cursorCircle";
 import { useEffect, useRef } from "react";
 import useHomeStore from "@/store/homeStore";
+import { useRouter } from "next/navigation";
 
 const works = [
   {
@@ -86,6 +87,8 @@ export default AppsSection;
 const WorkContainer = ({work, end}) => {
   const workContainerRef = useRef(null);
   const addToWorkContRefs = useHomeStore((state) => state.addToWorkContRefs);
+
+  const router = useRouter()
   
   const dropAudioRef = useRef(null); 
   
@@ -94,7 +97,7 @@ const WorkContainer = ({work, end}) => {
       addToWorkContRefs(workContainerRef.current);
     }
     if (dropAudioRef?.current) {
-      dropAudioRef.current.volume = 0.4;
+      dropAudioRef.current.volume = 0.8;
     }
   }, [workContainerRef, addToWorkContRefs]);
   
@@ -104,9 +107,13 @@ const WorkContainer = ({work, end}) => {
     }
   };
 
+  const goToApp = () => {
+    router.push('/project')
+  }
+
 
   return (
-    <div ref={workContainerRef} onMouseEnter={playDropSound} className={`workContainer ${end && 'end'}`}>
+    <div ref={workContainerRef} onClick={goToApp} onMouseEnter={playDropSound} className={`workContainer ${end && 'end'}`}>
       <audio
       ref={dropAudioRef}
       src="/sfx/drop.mp3"

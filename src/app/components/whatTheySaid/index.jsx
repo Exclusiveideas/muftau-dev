@@ -111,7 +111,7 @@ const WhatTheySaid = () => {
             }`}
           >
             <Image
-              src={`/images/comments/${comment?.picture}.jpeg`}
+              src={`/images/comments/${comment?.picture}.png`}
               width={400}
               height={400}
               alt="clients picture"

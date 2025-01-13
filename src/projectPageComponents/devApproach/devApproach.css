@@ -1,0 +1,8 @@
+
+.devApproach-wrapper {
+    width: 100%;
+    height: max-content;
+    min-height: 100vh;
+
+    background-color: var(--bg-color);
+}

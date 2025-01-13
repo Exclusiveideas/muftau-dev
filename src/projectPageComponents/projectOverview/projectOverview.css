@@ -1,0 +1,63 @@
+
+.projectOverview {
+    height: 45vh;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8rem;
+    
+    
+    padding-left: var(--page-padding);
+    padding-right: var(--page-padding);
+}
+
+
+.myRoleDescription {
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.roleTitle {
+    font-size: .9rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    overflow-y: hidden;
+    text-transform: uppercase;
+    position: relative;
+    width: max-content;
+    padding-bottom: .3rem;
+}
+
+.underline {
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    height: 1px;
+    background-color: var(--red-color);
+}
+
+.myRoleDescription .myRole {
+    font-size: 1rem;
+    word-spacing: 2px;
+}
+
+.aboutProject {
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
