@@ -16,7 +16,7 @@ const works = [
       'Database',
     ],
     year: '2024',
-    to: 'homeMade'
+    to: '/project/homeMade'
   },
   {
     name: 'HavenHub - Real Estate Marketplace',
@@ -27,7 +27,7 @@ const works = [
       'Database',
     ],
     year: '2024',
-    to: 'havenhub'
+    to: '/project/havenhub'
   },
   {
     name: 'ShareMe - Social Media',
@@ -39,7 +39,7 @@ const works = [
       'Database',
     ],
     year: '2024',
-    to: 'shareMe'
+    to: '/project/shareMe'
   },
   {
     name: 'AATU - University Portal',
@@ -51,7 +51,7 @@ const works = [
       'QA Specialist',
     ],
     year: '2024',
-    to: 'aatu'
+    to: 'http://techu-dsa.vercel.app/'
   },
   {
     name: 'Crypto-Guide HQ',
@@ -63,7 +63,7 @@ const works = [
       'API',
     ],
     year: '2024',
-    to: 'cryptoHQ'
+    to: 'https://cryptoguidehq.web.app/'
   },
 ]
 
@@ -113,7 +113,7 @@ const WorkContainer = ({work, end}) => {
   };
 
   const goToApp = () => {
-    router.push(`/project/${work?.to}`)
+    router.push(work?.to)
   }
 
 

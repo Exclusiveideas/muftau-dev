@@ -181,7 +181,7 @@ const ShareMe = () => {
     <WorkFlowCont workflowContDets={workflowContDets} />
     <Demo demoImg={'/images/project/demo-placeholder.png'} />
     <Reflection />
-    <FinalDemo demoImg={'/images/project/demo-last.png'} live={'https://realtor-opal.vercel.app/'} prevProject={'homeMade'} nextProject={'shareMe'} />
+    <FinalDemo demoImg={'/images/project/demo-last.png'} live={'https://silly-goldwasser-fdb2eb.netlify.app/'} prevProject={'havenhub'} nextProject={'homeMade'} />
 </div>
   )
 }
