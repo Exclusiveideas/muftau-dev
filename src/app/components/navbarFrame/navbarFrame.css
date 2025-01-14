@@ -25,9 +25,8 @@
     cursor: pointer;
     /* width: max-content; */
     padding: 1rem;
-    
-    /* border: 1px solid white; */
     transform: scale(.6);
+    
 }
 
 
@@ -72,6 +71,9 @@
     right: 0;
     display: flex;
     flex-direction: columns;
+    
+  backdrop-filter: blur(10px); /* Apply blur filter */
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .menu-items {
@@ -116,6 +118,10 @@
     left: 0;
     display: flex;
     flex-direction: column;
+    
+
+  backdrop-filter: blur(10px); /* Apply blur filter */
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .external-links {
@@ -138,6 +144,10 @@
     gap: 3rem;
     height: 180px;
     width: 50px;
+    
+
+  backdrop-filter: blur(10px); /* Apply blur filter */
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .soundControl_container:hover p{
