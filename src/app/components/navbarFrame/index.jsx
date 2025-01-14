@@ -44,7 +44,7 @@ export const NavbarFrameLeft = () => {
 };
 
 export const NavbarFrameRight = ({ projectPage }) => {
-  const [sound, setSound] = useState(true);
+  const [sound, setSound] = useState(false);
   const [menuHover, setMenuHover] = useState("");
   const activeMenu = useHomeStore((state) => state.activeMenu);
   const setActiveMenu = useHomeStore((state) => state.setActiveMenu);
@@ -61,12 +61,13 @@ export const NavbarFrameRight = ({ projectPage }) => {
       clickAudioRef.current.play();
     }
   }
+  
 
   return (
     <div className="navbarFrame-wrapper right">
       <audio ref={clickAudioRef} src="/sfx/click.mp3" />
       <div className="soundControl_container">
-        <WaveAnimation playClickSound={playClickSound} setSound={setSound} />
+        <WaveAnimation playClickSound={playClickSound} setSound={setSound} projectPage={projectPage} />
         <p>
           Sound{" "}
           <span className={`toggleCont ${sound ? "on" : "off"} `}>

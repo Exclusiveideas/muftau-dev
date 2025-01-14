@@ -6,7 +6,7 @@ import "./waveAnimation.css";
 import gsap from "gsap";
 import useHomeStore from "@/store/homeStore";
 
-const WaveAnimation = ({ playClickSound, setSound }) => {
+const WaveAnimation = ({ playClickSound, setSound, projectPage }) => {
   const svgRef = useRef(null);
   const lineRef = useRef(null);
   const [isWaving, setIsWaving] = useState(true);
@@ -72,6 +72,7 @@ const WaveAnimation = ({ playClickSound, setSound }) => {
 
     audioRef.current.volume = 0.3;
     audioRef.current.play();
+    setSound(true);
 
     return () => {
       // Cleanup audio on unmount
@@ -80,10 +81,12 @@ const WaveAnimation = ({ playClickSound, setSound }) => {
         audioRef.current.src = "";
       }
     };
-  }, [loadingScreen]);
+  }, [loadingScreen, projectPage]);
 
   useEffect(() => {
-    if (loadingScreen) return;
+    if(!projectPage) {
+      if (loadingScreen) return;
+    }
 
     playClickSound();
 
@@ -92,7 +95,18 @@ const WaveAnimation = ({ playClickSound, setSound }) => {
     } else {
       setSound(false);
     }
-  }, [isWaving]);
+  }, [isWaving, projectPage]);
+
+  useEffect(() => {    
+    if(!projectPage) return
+
+    audioRef.current.volume = 0.3;
+
+    setTimeout(() => {
+      toggleWaveAndMusic()
+    }, 1000); 
+  }, [projectPage])
+  
   
   
 
