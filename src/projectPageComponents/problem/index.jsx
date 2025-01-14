@@ -1,18 +1,19 @@
 import Image from "next/image";
 import "./problem.css";
 
-const Problem = ({ problemHiglight, problemsList, problemImgs}) => {
+const Problem = ({ title, noListing, problemHiglight, problemsList, problemImgs}) => {
   return (
     <div className="problem-wrapper">
       <h4 className="problem-label">
-        1. The Problem
+        1. {title ?? 'The Problem'}
         <hr className="problem-underline" />
       </h4>
       <div className="problem-content-wrapper">
         <div className="problem-higlight">
           <p>{problemHiglight}</p>
         </div>
-        <div className="problems-listing">
+        {!noListing && (
+          <div className="problems-listing">
           <div className="left-problems-container">
             {problemsList?.map((problem, i) => (
               <p key={i}>
@@ -34,7 +35,7 @@ const Problem = ({ problemHiglight, problemsList, problemImgs}) => {
               </div>
             ))}
           </div>
-        </div>
+        </div>)}
       </div>
     </div>
   );

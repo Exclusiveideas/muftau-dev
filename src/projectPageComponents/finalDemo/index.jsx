@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import './finalDemo.css';
 
-const FinalDemo = ({ demoImg, prevProject, nextProject }) => {
+const FinalDemo = ({ demoImg, live, prevProject, nextProject }) => {
   return (
     <div className="finalDemo-wrapper">
       <div className="fd-image-container">
@@ -20,7 +20,7 @@ const FinalDemo = ({ demoImg, prevProject, nextProject }) => {
           <p>Previous Project: <span className='projectName'>{prevProject}</span></p>
         </a>
         )}
-        <a href="https://home-made-one.vercel.app/" target="_blank" rel="noopener noreferrer" className="liveDemo-container">
+        <a href={live} target="_blank" rel="noopener noreferrer" className="liveDemo-container">
           <p>Live Demo</p>
         </a>
         {nextProject && (

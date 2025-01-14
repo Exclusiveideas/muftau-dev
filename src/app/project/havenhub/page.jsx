@@ -144,7 +144,7 @@ const HavenHub = () => {
         <DesignProcess wireframeDetails={wireframeDetails} />
         <Demo demoImg={'/images/project/demo-placeholder.png'} />
         <DevApproach number={3} techStack={techStack} keyDevSteps={keyDevSteps} optimizationDets={optimizationDets} />
-        <FinalDemo demoImg={'/images/project/demo-last.png'} prevProject={'homeMade'} nextProject={'shareMe'} />
+        <FinalDemo demoImg={'/images/project/demo-last.png'} live={'https://realtor-opal.vercel.app/'} prevProject={'homeMade'} nextProject={'shareMe'} />
     </div>
   )
 }

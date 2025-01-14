@@ -184,7 +184,7 @@ const HomeMade = () => {
       <Demo demoImg={'/images/project/demo-placeholder.png'} />
       <DesignProcessCont />
       <DevApproach number={4} techStack={techStack} keyDevSteps={keyDevSteps} optimizationDets={optimizationDets} />
-      <FinalDemo demoImg={'/images/project/demo-last.png'} nextProject={'havenhub'} />
+      <FinalDemo demoImg={'/images/project/demo-last.png'} live={"https://home-made-one.vercel.app/"} nextProject={'havenhub'} />
     </div>
   );
 };

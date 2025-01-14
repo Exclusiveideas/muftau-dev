@@ -2,7 +2,7 @@
 .devApproach-wrapper {
     width: 100%;
     height: max-content;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 
     background-color: var(--bg-color);
     box-sizing: border-box;
@@ -62,15 +62,20 @@
     width: 90%;
     overflow: hidden;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr minmax(0, auto);
+    grid-template-columns: repeat(3, 1fr) minmax(0, 1fr);
     gap: 3rem;
     box-sizing: border-box;
     padding: 1rem;
 }
 
+.sub-sect-contentContainer:empty {
+    grid-template-columns: repeat(3, 1fr); /* Remove the last column */
+  }
+
 .technology-container {
     display: flex;
     flex-direction: column;
+    /* border: 1px solid white; */
     width: 100%;
     align-items: center;
     justify-content: start;

@@ -2,11 +2,11 @@ import Image from "next/image";
 import "./designProcess.css";
 
 
-const DesignProcess = ({ personaDetails, wireframeDetails }) => {
+const DesignProcess = ({ title, personaDetails, wireframeDetails }) => {
   return (
     <div className="designProcess-wrapper">
       <div className="dp-section-label">
-        3. Design Process
+        {title ?? '3. Design Process'}
         <hr className="dp-underline" />
       </div>
       {personaDetails?.label && (
