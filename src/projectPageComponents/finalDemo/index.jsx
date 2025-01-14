@@ -2,12 +2,12 @@
 import Image from 'next/image';
 import './finalDemo.css';
 
-const FinalDemo = () => {
+const FinalDemo = ({ demoImg, prevProject, nextProject }) => {
   return (
     <div className="finalDemo-wrapper">
       <div className="fd-image-container">
         <Image
-          src={`/images/project/demo-last.png`}
+          src={demoImg || ''}
           width={2500}
           height={2500}
           alt="demo image"
@@ -15,12 +15,19 @@ const FinalDemo = () => {
         />
       </div>
       <div className="demo-nextProject">
+        {prevProject && (
+          <a href={`/project/${prevProject}`} className="prev-project">
+          <p>Previous Project: <span className='projectName'>{prevProject}</span></p>
+        </a>
+        )}
         <a href="https://home-made-one.vercel.app/" target="_blank" rel="noopener noreferrer" className="liveDemo-container">
           <p>Live Demo</p>
         </a>
-        <a href="/project/havenhub" rel="noopener noreferrer" className="next-project">
-          <p>Next Project: HavenHub</p>
+        {nextProject && (
+          <a href={`/project/${nextProject}`} className="next-project">
+          <p>Next Project: <span className='projectName'>{nextProject}</span></p>
         </a>
+        )}
       </div>
     </div>
   );

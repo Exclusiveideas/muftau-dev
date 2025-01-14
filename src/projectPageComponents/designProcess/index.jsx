@@ -1,72 +1,47 @@
 import Image from "next/image";
 import "./designProcess.css";
 
-const wireframes = [
-  {
-    img: "low-fidelity.png",
-  },
-  {
-    img: "low-fidelity-2.png",
-  },
-  {
-    img: "wireframe.png",
-  },
-  {
-    img: "high-fidelity.jpg",
-  },
-];
 
-const DesignProcess = () => {
+const DesignProcess = ({ personaDetails, wireframeDetails }) => {
   return (
     <div className="designProcess-wrapper">
       <div className="dp-section-label">
         3. Design Process
         <hr className="dp-underline" />
       </div>
-      <div className="userPersona-wrapper">
+      {personaDetails?.label && (
+        <div className="userPersona-wrapper">
         <div className="dp-sub-section-label">
-          a. User Persona
+          {personaDetails?.label}
           <hr className="dp-underline" />
         </div>
         <div className="personas-container">
-          <div className="client-persona-wrapper">
+          {personaDetails?.personas?.map((persona, i) => (
+            <div key={i} className="client-persona-wrapper">
             <Image
-              src={`/images/project/sarah.jpeg`}
+              src={persona?.img || ''}
               width={700}
               height={700}
               alt="sarah image"
               className="personaImg"
             />
-            <p className="persona-header">Client Persona</p>
+            <p className="persona-header">{persona?.header}</p>
             <p className="persona-description">
-              {" "}
-              Sarah, a working mother looking for chefs nearby who can prepare
-              healthy meals for her family.
+              {persona?.desc}
             </p>
           </div>
-          <div className="client-persona-wrapper">
-            <Image
-              src={`/images/project/sarah.jpeg`}
-              width={700}
-              height={700}
-              alt="sarah image"
-              className="personaImg"
-            />
-            <p className="persona-header">Chef Persona</p>
-            <p className="persona-description">
-              Chef Alex, a freelance chef looking to expand his client base and
-              showcase his culinary expertise.
-            </p>
-          </div>
+          ))}
         </div>
       </div>
+      )}
+      {wireframeDetails?.label && (
       <div className="wireframes-wrapper">
         <div className="dp-sub-section-label">
-          b. Wireframing and Prototyping
+          {wireframeDetails?.label}
           <hr className="dp-underline" />
         </div>
         <div className="wireframes-container">
-          {wireframes?.map((wireframe, i) => (
+          {wireframeDetails?.wireframes?.map((wireframe, i) => (
             <div key={i} className="wireframe-container">
               <Image
                 src={`/images/project/${wireframe?.img}`}
@@ -79,6 +54,7 @@ const DesignProcess = () => {
           ))}
         </div>
       </div>
+      )}
     </div>
   );
 };

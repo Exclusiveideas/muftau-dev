@@ -1,22 +1,7 @@
 import Image from "next/image";
 import "./solution.css";
 
-const keyFeatures = [
-  {
-    label: "Onboarding Process",
-  },
-  {
-    label: "Profiles and Details",
-  },
-  {
-    label: "Search and Discovery",
-  },
-  {
-    label: "Real-Time Chat",
-  },
-];
-
-const Solution = () => {
+const Solution = ({ keyFeatures }) => {
   return (
     <div className="solution-container">
       <div className="solution-section-label">
@@ -32,7 +17,7 @@ const Solution = () => {
           {keyFeatures?.map((feature, i) => (
             <div key={i} className="solutionsImg-container">
               <Image
-                src={`/images/project/problem.png`}
+                src={feature?.img || ''}
                 width={1000}
                 height={1000}
                 alt="solutions image"

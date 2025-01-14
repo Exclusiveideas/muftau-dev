@@ -15,7 +15,8 @@ const works = [
       'Full-stack',
       'Database',
     ],
-    year: '2024'
+    year: '2024',
+    to: 'homeMade'
   },
   {
     name: 'HavenHub - Real Estate Marketplace',
@@ -25,7 +26,8 @@ const works = [
       'Full-stack',
       'Database',
     ],
-    year: '2024'
+    year: '2024',
+    to: 'havenhub'
   },
   {
     name: 'ShareMe - Social Media',
@@ -36,7 +38,8 @@ const works = [
       'Cloud',
       'Database',
     ],
-    year: '2024'
+    year: '2024',
+    to: 'shareMe'
   },
   {
     name: 'AATU - University Portal',
@@ -47,7 +50,8 @@ const works = [
       'Full-stack engineeer',
       'QA Specialist',
     ],
-    year: '2024'
+    year: '2024',
+    to: 'aatu'
   },
   {
     name: 'Crypto-Guide HQ',
@@ -58,7 +62,8 @@ const works = [
       'Full-stack',
       'API',
     ],
-    year: '2024'
+    year: '2024',
+    to: 'cryptoHQ'
   },
 ]
 
@@ -108,7 +113,7 @@ const WorkContainer = ({work, end}) => {
   };
 
   const goToApp = () => {
-    router.push('/project')
+    router.push(`/project/${work?.to}`)
   }
 
 

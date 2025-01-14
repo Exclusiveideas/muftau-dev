@@ -52,6 +52,18 @@
     background-color: #9e9689;
 }
 
+.prev-project {
+    width:  max-content;
+    height: max-content;
+    padding: 1rem 2rem;
+    background-color: var(--brown-color);
+    color: black;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    position: absolute;
+    left: 3rem;
+}
+
 .next-project {
     width:  max-content;
     height: max-content;
@@ -66,4 +78,8 @@
 
 .next-project:hover {
     background-color: #9e9689;
+}
+
+.projectName {
+    text-transform: uppercase;
 }

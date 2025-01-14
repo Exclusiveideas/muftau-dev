@@ -1,12 +1,12 @@
 import Image from "next/image";
 import "./demo.css";
 
-const Demo = () => {
+const Demo = ({ demoImg }) => {
   return (
     <div className="demo-wrapper">
       <div className="image-container">
         <Image
-          src={`/images/project/demo-placeholder.png`}
+          src={demoImg ||  ''}
           width={2500}
           height={2500}
           alt="demo image"

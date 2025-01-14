@@ -62,7 +62,7 @@
     width: 90%;
     overflow: hidden;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr minmax(0px, 1fr);
+    grid-template-columns: 1fr 1fr 1fr minmax(0, auto);
     gap: 3rem;
     box-sizing: border-box;
     padding: 1rem;
