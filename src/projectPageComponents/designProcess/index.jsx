@@ -44,10 +44,10 @@ const DesignProcess = ({ title, personaDetails, wireframeDetails }) => {
           {wireframeDetails?.wireframes?.map((wireframe, i) => (
             <div key={i} className="wireframe-container">
               <Image
-                src={`/images/project/${wireframe?.img}`}
+                src={wireframe?.img || ''}
                 width={700}
                 height={700}
-                alt="sarah image"
+                alt="wireframe image"
                 className="wireframeImg"
               />
             </div>
@@ -65,42 +65,51 @@ export default DesignProcess;
 const clientProcess = [
   {
     label: `1. Sign-Up`,
-    desc: `User signs up and sets their location.`
+    desc: `User signs up and sets their location.`,
+    img: 'https://firebasestorage.googleapis.com/v0/b/exclusiveideas-c9470.appspot.com/o/muftau-dev%2Fprojects%2FhomeMade%2Fsign-up.png?alt=media'
   },
   {
     label: `2. Onboarding`,
-    desc: `Users provide basic information to complete their profile, ensuring they can fully utilize the platform's features.`
+    desc: `Users provide basic information to complete their profile, ensuring they can fully utilize the platform's features.`,
+    img: 'https://firebasestorage.googleapis.com/v0/b/exclusiveideas-c9470.appspot.com/o/muftau-dev%2Fprojects%2FhomeMade%2Fonboarding-one.png?alt=media'
   },
   {
     label: `3. Search and Discovery`,
-    desc: `Searches for chefs or dishes based on filters.`
+    desc: `Searches for chefs or dishes based on filters.`,
+    img: 'https://firebasestorage.googleapis.com/v0/b/exclusiveideas-c9470.appspot.com/o/muftau-dev%2Fprojects%2FhomeMade%2Fbrowse-page-one.png?alt=media'
   },
   {
     label: `4. Profiles Visit`,
-    desc: `Visits a chef’s profile to view certifications and reviews.`
+    desc: `Visits a chef’s profile to view certifications and reviews.`,
+    img: 'https://firebasestorage.googleapis.com/v0/b/exclusiveideas-c9470.appspot.com/o/muftau-dev%2Fprojects%2FhomeMade%2Fprofile-page-1.png?alt=media'
   },
   {
     label: `5. Chat`,
-    desc: `Initiates a chat to discuss availability.`
+    desc: `Initiates a chat to discuss availability.`,
+    img: 'https://firebasestorage.googleapis.com/v0/b/exclusiveideas-c9470.appspot.com/o/muftau-dev%2Fprojects%2FhomeMade%2Fchat-page-one.png?alt=media'
   },
 ];
 
 const chefProcess = [
   {
     label: `1. Registration`,
-    desc: ` Chef signs up and uploads certifications and employment history.`
+    desc: ` Chef signs up and uploads certifications and employment history.`,
+    img: 'https://firebasestorage.googleapis.com/v0/b/exclusiveideas-c9470.appspot.com/o/muftau-dev%2Fprojects%2FhomeMade%2Flogin.png?alt=media'
   },
   {
     label: `2. Onboarding`,
-    desc: `Users provide basic information to complete their profile, ensuring they can fully utilize the platform's features.`
+    desc: `Users provide basic information to complete their profile, ensuring they can fully utilize the platform's features.`,
+    img: 'https://firebasestorage.googleapis.com/v0/b/exclusiveideas-c9470.appspot.com/o/muftau-dev%2Fprojects%2FhomeMade%2Fonboarding-2.png?alt=media'
   },
   {
     label: `3. Profile Completion`,
-    desc: `Adds dishes, specialties, and pricing.`
+    desc: `Adds dishes, specialties, and pricing.`,
+    img: 'https://firebasestorage.googleapis.com/v0/b/exclusiveideas-c9470.appspot.com/o/muftau-dev%2Fprojects%2FhomeMade%2Fprofile-completion.png?alt=media'
   },
   {
     label: `4. Engagement`,
-    desc: `Interacts with users and manages bookings.`
+    desc: `Interacts with users and manages bookings.`,
+    img: 'https://firebasestorage.googleapis.com/v0/b/exclusiveideas-c9470.appspot.com/o/muftau-dev%2Fprojects%2FhomeMade%2Fchat-page-one.png?alt=media'
   },
 ];
 
@@ -123,7 +132,7 @@ export const DesignProcessCont = () => (
             {clientProcess?.map((process, i) => (
               <div key={i} className="scenarioImg-container">
                 <Image
-                  src={`/images/project/problem.png`}
+                  src={process?.img ||  ''}
                   width={1000}
                   height={1000}
                   alt="scenario image"
@@ -148,7 +157,7 @@ export const DesignProcessCont = () => (
             {chefProcess?.map((process, i) => (
               <div key={i} className="scenarioImg-container">
                 <Image
-                  src={`/images/project/problem.png`}
+                  src={process?.img ||  ''}
                   width={1000}
                   height={1000}
                   alt="scenario image"

@@ -7,8 +7,6 @@ import useHomeStore from '@/store/homeStore';
 
 const LoadingScreen = () => {
   const [progress, setProgress] = useState(0);
-  
-  const audioRef = useRef(null); 
 
   const deerRef = useRef(null);
   const progressRef = useRef(null);
@@ -89,10 +87,6 @@ const LoadingScreen = () => {
     if(loadingScreen || !loadingScreenRef?.current) {
         return
     }
-    if(audioRef?.current) {
-    audioRef.current.volume = 0.8;
-    audioRef.current.play();
-    }
     closeLoadingScreen()
   }, [loadingScreen])
 
@@ -113,10 +107,6 @@ const LoadingScreen = () => {
  
   return (
     <div ref={loadingScreenRef} className="loadingScreen">
-      <audio
-      ref={audioRef}
-      src="/sfx/click.mp3"
-    />
       <div className="centerContainer">
         <svg
           ref={progressRef}
