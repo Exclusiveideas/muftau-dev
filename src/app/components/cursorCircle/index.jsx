@@ -66,8 +66,6 @@ const JellyBlob = () => {
   // Run on Mouse Move
   useLayoutEffect(() => {
     if (!window) return
-
-
     
     const setFromEvent = (e) => {
       // Mouse X and Y
