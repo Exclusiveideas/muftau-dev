@@ -1,12 +1,10 @@
-
 .wf-wrapper {
     width: 100%;
-    
+
     height: max-content;
-    /* min-height: 100vh; */
     box-sizing: border-box;
     background-color: var(--bg-light-color);
-    
+
     padding: var(--page-padding);
     padding-top: 0;
     display: flex;
@@ -55,4 +53,43 @@
     display: flex;
     flex-direction: column;
     gap: .3rem;
+}
+
+
+/* Tab */
+@media (max-width: 992px) {
+    .wf-wrapper {
+        padding: 4rem;
+        gap: 3rem;
+        padding-top: 2rem;
+    }
+    
+    .wf-sub-content-container {
+        align-self: flex-start;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    
+    .wf-contentContainer {
+        width: 100%;
+        gap: .6rem;
+    }
+    .wf-contentContainer ol {
+        gap: .5rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+    .wf-wrapper {
+        padding: 3rem;
+        gap: 2.5rem;
+        padding-top: 0;
+    }
+
+    .wf-sub-content-container {
+        grid-template-columns: 1fr;
+    }
+
 }

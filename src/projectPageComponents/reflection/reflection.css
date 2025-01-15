@@ -1,12 +1,11 @@
-
 .reflection-wrapper {
     width: 100%;
-    
+
     height: max-content;
     /* min-height: 100vh; */
     box-sizing: border-box;
     background-color: var(--bg-light-color);
-    
+
     padding: var(--page-padding);
     display: flex;
     flex-direction: column;
@@ -38,4 +37,56 @@
 
 .sub-list-item {
     display: block;
+}
+
+
+
+.rf-section-label {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    overflow-y: hidden;
+    text-transform: uppercase;
+    position: relative;
+    width: max-content;
+    padding-bottom: .3rem;
+}
+
+
+
+/* Tab */
+@media (max-width: 992px) {
+    .reflection-wrapper {
+        padding: 4rem;
+        gap: 2rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+    .reflection-wrapper {
+        padding: 2.5rem;
+    }
+
+    .rf-section-label {
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+    
+    .reflection-content-container {
+        /* border: 1px solid white; */
+        margin-left: .5rem;
+    }
+
+    .listItem-Txt {
+        font-size: 13px;
+        gap: .5rem;
+    }
+
+    .boldTxt {
+        font-weight: bold;
+        font-size: 13px;
+    }
+
+
 }

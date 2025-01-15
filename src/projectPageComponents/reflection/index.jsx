@@ -3,7 +3,7 @@ import "./reflection.css";
 const Reflection = () => {
   return (
     <div className="reflection-wrapper">
-      <div className="dp-section-label">
+      <div className="rf-section-label">
         5. Reflection
         <hr className="dp-underline" />
       </div>

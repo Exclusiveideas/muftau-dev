@@ -52,7 +52,7 @@ const works = [
       'QA Specialist',
     ],
     year: '2024',
-    to: 'http://techu-dsa.vercel.app/'
+    to: '/project/aatu'
   },
   {
     name: 'Crypto-Guide HQ',
@@ -64,7 +64,7 @@ const works = [
       'API',
     ],
     year: '2022',
-    to: 'https://cryptoguidehq.web.app/'
+    to: '/project/cryptoHQ'
   },
 ]
  
