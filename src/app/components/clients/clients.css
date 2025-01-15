@@ -38,16 +38,77 @@
 }
 
 
+
+
 .WTS-section-intro {
     position: absolute;
     bottom: 1.5rem;
     left: var(--padding-left);
 
-    
+
     font-size: .7rem;
     font-weight: 600;
     letter-spacing: 4px;
     word-spacing: 10px;
     overflow-y: hidden;
     text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+/* Tab */
+@media (max-width: 992px) {
+    .clients-wrapper {
+        height: 65vh;
+        padding-left: 3rem;
+        padding-top: 5.5rem;
+    }
+
+
+    .clients-content-wrapper {
+        width: 100%;
+    }
+
+    .clients-overlayText {
+        font-size: 8vw;
+        font-weight: 700;
+        line-height: 120%;
+        letter-spacing: -1px;
+    }
+
+
+    .WTS-section-intro {
+        font-size: 1.8vw;
+        left: 50%;
+        letter-spacing: 2px;
+        word-spacing: 5px;
+        transform: translateX(-50%);
+    }
+}
+
+
+
+
+/* Mobile */
+@media (max-width: 575px) {
+    .clients-wrapper {
+        height: 55vh;
+        padding-top: 3rem;
+    }
+
+    .clients-overlayText {
+        font-size: 8.8vw;
+        line-height: 100%;
+    }
+
+
+    .WTS-section-intro {
+        font-size: .7rem;
+    }
+    
 }

@@ -1,4 +1,3 @@
-
 .projectOverview {
     height: 45vh;
     width: 100%;
@@ -7,10 +6,11 @@
     align-items: center;
     justify-content: space-between;
     gap: 8rem;
-    
-    
+
+
     padding-left: var(--page-padding);
     padding-right: var(--page-padding);
+    padding-bottom: 2rem;
 }
 
 
@@ -60,4 +60,62 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+}
+
+
+
+
+/* Tab */
+@media (max-width: 992px) {
+
+    .projectOverview {
+        height: max-content;
+        min-height: 30vh;
+        align-items: flex-start;
+        gap: 4rem;
+
+
+        padding-left: 3rem;
+        padding-right: 1rem;
+        margin-bottom: 2rem;
+    }
+}
+
+
+
+
+/* Mobile */
+@media (max-width: 575px) {
+
+    .projectOverview {
+        min-height: 45vh;
+        flex-direction: column;
+        padding-bottom: 2rem;
+    }
+
+
+
+    .myRoleDescription {
+        width: 100%;
+        gap: 1.5rem;
+    }
+
+    .roleTitle {
+        align-self: center;
+        padding-bottom: .5rem;
+    }
+
+    .myRoleDescription .myRole {
+        font-size: .9rem;
+        word-spacing: 1px;
+    }
+
+
+    .aboutProject {
+        width: 100%;
+        gap: 1rem;
+        font-size: .9rem;
+    }
+    
+
 }

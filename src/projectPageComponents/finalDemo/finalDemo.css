@@ -1,4 +1,3 @@
-
 .finalDemo-wrapper {
     width: 100%;
     height: max-content;
@@ -37,7 +36,7 @@
 }
 
 .liveDemo-container {
-    width:  max-content;
+    width: max-content;
     height: max-content;
     padding: 1rem 2rem;
     background-color: var(--brown-color);
@@ -53,7 +52,7 @@
 }
 
 .prev-project {
-    width:  max-content;
+    width: max-content;
     height: max-content;
     padding: 1rem 2rem;
     background-color: var(--brown-color);
@@ -65,7 +64,7 @@
 }
 
 .next-project {
-    width:  max-content;
+    width: max-content;
     height: max-content;
     padding: 1rem 2rem;
     background-color: var(--brown-color);
@@ -82,4 +81,46 @@
 
 .projectName {
     text-transform: uppercase;
+}
+
+
+
+/* Tab */
+@media (max-width: 992px) {
+
+    .demo-nextProject {
+        font-size: 11px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+    .finalDemo-wrapper {
+        min-height: 70vh;
+    }
+
+    .fd-image-container {
+        height: 50vh;
+    }
+
+
+    .demo-nextProject {
+        flex-direction: column;
+        gap: .7rem;
+        padding: 1rem;
+
+        font-size: 11px;
+    }
+
+
+    .prev-project {
+        position: static;
+    }
+
+
+    .next-project {
+        position: static;
+    }
+
+
 }

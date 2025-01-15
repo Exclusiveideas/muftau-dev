@@ -1,4 +1,3 @@
-
 .whatIDoText-wrapper {
     --border-color: #b7ab982f;
 
@@ -11,6 +10,7 @@
     border-top: .5px solid var(--border-color);
     border-bottom: .5px solid var(--border-color);
     padding-left: var(--padding-left);
+    padding-right: 4rem;
     position: relative;
     height: 6.5rem;
     box-sizing: border-box;
@@ -24,13 +24,47 @@
     position: absolute;
     opacity: 0.2;
     padding: .7rem 0;
+    height: 100%;
+    overflow: hidden;
 }
 
 .whatIDo-word-visible {
-    /* border: 1px solid white; */
-    /* width: 50%; */
     box-sizing: border-box;
     overflow: hidden;
     height: 100%;
     padding: .7rem 0;
+}
+
+.whatIDo-word-visible p {
+    width: max-content;
+}
+
+
+
+
+
+
+/* Tab */
+@media (max-width: 992px) {
+    .whatIDoText-wrapper {
+        padding-left: 3rem;
+        font-size: 13vw;
+        height: max-content;
+        padding-right: 2rem;
+    }
+
+}
+
+
+
+
+/* Mobile */
+@media (max-width: 575px) {
+    .whatIDoText-wrapper {
+        padding-left: 2.5rem;
+        font-size: 13vw;
+        height: max-content;
+        padding-right: 2rem;
+    }
+
 }

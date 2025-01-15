@@ -80,3 +80,43 @@
   opacity: 0;
   white-space: nowrap; 
 }
+
+
+
+
+
+/* Tab */
+@media (max-width: 992px) {
+    .background-circle {
+        width: 90vw;
+    }
+
+    
+
+.heroContent-wrapper {
+    width: 85%;
+    padding-top: 0;
+}
+}
+
+
+
+
+
+/* Mobile */
+@media (max-width: 575px) {    
+
+.headerText {
+    font-size: 20.6vw;
+    font-weight: 600;
+    line-height: 90%;
+    letter-spacing: -8px;
+}
+
+
+
+.headerText p {
+    height: 6rem;
+}
+
+}

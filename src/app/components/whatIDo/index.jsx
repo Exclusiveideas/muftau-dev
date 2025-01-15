@@ -14,7 +14,7 @@ const WhatIDo = () => {
           height={1440}
           alt="planet image"
           className="planetImg"
-        />
+        /> 
       </div>
       <div className="whatIDo-contentWrapper">
         <p className="whatIDo-section-name">What I Do</p>

@@ -26,6 +26,7 @@
 .planetImg {
     width: max-content;
     height: 100%;
+    object-fit: cover;
 }
 
 .whatIDo-contentWrapper {
@@ -56,4 +57,34 @@
     flex-direction: column;
     box-sizing: border-box;
     padding: 0;
+}
+
+
+
+
+
+/* Tab */
+@media (max-width: 992px) {
+    .whatIDo-wrapper {
+        height: 80vh;
+    }
+
+    .whatIDo-section-name {
+        padding-left: 3rem;
+    }
+}
+
+
+
+
+
+/* Mobile */
+@media (max-width: 575px) {
+    .whatIDo-wrapper {
+        height: 80vh;
+    }
+
+    .whatIDo-section-name {
+        padding-left: 2.5rem;
+    }
 }

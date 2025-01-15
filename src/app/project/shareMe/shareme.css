@@ -9,3 +9,14 @@
       color: var(--brown-color);
       box-sizing: border-box;
   }
+
+  
+/* Tab */
+@media (max-width: 992px) {}
+
+
+
+
+/* Mobile */
+@media (max-width: 575px) {
+}

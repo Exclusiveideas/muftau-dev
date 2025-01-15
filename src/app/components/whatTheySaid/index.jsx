@@ -48,7 +48,7 @@ const WhatTheySaid = () => {
   const loadingScreen = useHomeStore((state) => state.loadingScreen);
 
   useEffect(() => {
-    if (loadingScreen) return;
+    if (loadingScreen) return; 
 
     gsap.registerPlugin(ScrollTrigger);
 

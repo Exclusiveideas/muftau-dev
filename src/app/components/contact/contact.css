@@ -25,11 +25,22 @@
 }
 
 .connection-wrapper {
+    display: flex;
+    gap: 2rem;
+}
+
+.connection-sites-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    row-gap: 1rem;
-    column-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1.5rem;
+    column-gap: 3rem;
+    flex: .5;
+}
+
+.connection-links-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .connection-sites {
@@ -52,7 +63,7 @@
     display: flex;
     flex-direction: column;
     gap: .3rem;
-    letter-spacing:1px;
+    letter-spacing: 1px;
 
 }
 
@@ -74,4 +85,87 @@
 .conection-links .value:hover {
     color: var(--brown-color);
     text-decoration: underline;
+}
+
+
+
+
+
+/* Tab */
+@media (max-width: 992px) {
+    .contact-wrapper {
+        min-height: 40vh;
+        height: max-content;
+
+        padding-left: 8rem;
+        padding-top: 5rem;
+        padding-right: 3rem;
+        padding-bottom: 1rem;
+        gap: 2rem;
+    }
+
+
+
+    .connection-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .connection-sites-wrapper {
+        column-gap: 2rem;
+    }
+
+
+    .connection-links-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+        padding-left: 1rem;
+    }
+
+    .connection-sites {
+        gap: .5rem;
+    }
+
+    .contact-indicatorIcon {
+        width: 10px;
+        height: max-content;
+        transform: rotate(115deg);
+        margin-top: .5rem;
+    }
+
+    .conection-links .value {
+        color: var(--brown-color);
+    }
+
+}
+
+
+
+
+/* Mobile */
+@media (max-width: 575px) {
+    .contact-wrapper {
+        min-height: 40vh;
+        height: max-content;
+
+        padding-left: 4rem;
+        padding-top: 3rem;
+        padding-right: 3rem;
+        padding-bottom: 1rem;
+        gap: 2rem;
+    }
+
+
+    .connection-links-wrapper {
+        padding-left: 0;
+    }
+
+    .connection-sites {
+        font-size: 5.5vw;
+        gap: .5rem;
+        letter-spacing: 0;
+    }
+
+
 }

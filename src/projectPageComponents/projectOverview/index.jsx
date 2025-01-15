@@ -12,7 +12,7 @@ const ProjectOverview = ({myRole, title, aboutProject}) => {
       </div>
       <div className="aboutProject">
         <h4 className="roleTitle">
-          WHat is {title}
+          What is {title}
           <hr className="underline" />
         </h4>
         <p className="about" dangerouslySetInnerHTML={{ __html: aboutProject }} />

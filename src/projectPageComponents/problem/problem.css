@@ -1,4 +1,3 @@
-
 .problem-wrapper {
     width: 100%;
     height: max-content;
@@ -8,10 +7,10 @@
     flex-direction: column;
     box-sizing: border-box;
     gap: 2rem;
-    
+
     padding-left: var(--page-padding);
     padding-right: var(--page-padding);
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
 }
 
 .problem-label {
@@ -86,21 +85,21 @@
 
 .right-problems-container::-webkit-scrollbar {
     width: 12px;
-    height: 12px; 
-  }
+    height: 12px;
+}
 
 .right-problems-container::-webkit-scrollbar-track {
-  background: transparent; 
+    background: transparent;
 }
 
 .right-problems-container::-webkit-scrollbar-thumb {
-  background: #888; 
-  border-radius: 10px;
+    background: #888;
+    border-radius: 10px;
 }
 
 .right-problems-container::-webkit-scrollbar-thumb:hover {
-  background: #555; 
-  cursor: pointer;
+    background: #555;
+    cursor: pointer;
 }
 
 .problemImg-container {
@@ -114,4 +113,57 @@
 .problemImg {
     height: 500px;
     width: max-content;
+}
+
+
+
+
+
+/* Tab */
+@media (max-width: 992px) {
+    .problem-wrapper {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+
+    .problem-higlight {
+        width: 70%;
+    }
+
+    .right-problems-container {
+        padding: .5rem;
+    }
+
+    .problemImg {
+        height: 400px;
+    }
+}
+
+
+
+
+/* Mobile */
+@media (max-width: 575px) {
+    .problem-wrapper {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+
+    .problem-higlight {
+        width: 100%;
+    }
+
+    .problems-listing {
+        flex-direction: column;
+    }
+
+    .left-problems-container {
+        width: 100%;
+    }
+
+    .right-problems-container {
+        width: 100%;
+    }
 }

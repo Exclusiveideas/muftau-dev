@@ -36,3 +36,59 @@
     position: relative;
     width: 100%;
 }
+
+
+
+
+
+
+
+
+/* Tab */
+@media (max-width: 992px) {
+    .aboutSection-wrapper {
+        padding-left: 4rem;
+        padding-top: 4rem;
+        height: 70vh;
+        padding-right: 2rem;
+    }
+
+    .overlayText {
+        font-size: 8vw;
+        font-weight: 700;
+        line-height: 110%;
+        letter-spacing: -3px;
+    }
+}
+
+
+
+
+
+/* Mobile */
+@media (max-width: 575px) {
+    .aboutSection-wrapper {
+        padding-left: 2rem;
+        padding-top: 2rem;
+        height: 73vh;
+    }
+
+
+
+    .section-name {
+        font-size: .7rem;
+        font-weight: 600;
+        letter-spacing: 3px;
+        word-spacing: 7px;
+    }
+
+    .overlayText {
+        font-size: 10vw;
+        font-weight: 700;
+        line-height: 110%;
+        letter-spacing: -3px;
+    }
+
+
+
+}

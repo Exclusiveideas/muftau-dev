@@ -13,7 +13,7 @@
     margin-top: 5rem;
 }
 
-.quote-marks {
+.quote-marks { 
     position: absolute;
     top: -1rem;
     left: -2.5rem;
@@ -66,4 +66,67 @@
     height: 1px;
     background-color: rgba(255, 255, 255, 0.252);
     border: none;
+}
+
+
+
+/* Tab */
+@media (max-width: 992px) {
+    .comment-wrapper {
+        width: 95%;
+        min-height: 40vh;
+        height: max-content;
+        gap: 3rem;
+        margin-top: 2rem;
+    }
+
+    
+.commentTxt {
+    width: 100%;
+    
+    font-size: 6.5vw;
+    letter-spacing: -1px;
+}
+    
+
+.quote-marks { 
+    position: absolute;
+    top: -.7rem;
+    left: -1.5rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+}
+
+
+
+
+/* Mobile */
+@media (max-width: 575px) {
+
+    .comment-wrapper {
+        width: 95%;
+        min-height: 50vh;
+        height: max-content;
+        gap: 3rem;
+        margin-top: 2rem;
+    }
+
+    
+.commentTxt {
+    width: 100%;
+    
+    font-size: 7.2vw;
+    letter-spacing: -1px;
+}
+    
+
+.quote-marks { 
+    position: absolute;
+    top: -.7rem;
+    left: -1.5rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
 }

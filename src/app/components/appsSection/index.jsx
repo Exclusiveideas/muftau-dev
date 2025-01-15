@@ -4,6 +4,7 @@ import JellyBlob from "../cursorCircle";
 import { useEffect, useRef } from "react";
 import useHomeStore from "@/store/homeStore";
 import { useRouter } from "next/navigation";
+import useIsMobile from "@/utils/hooks/useIsMobile";
 
 const works = [
   {
@@ -38,7 +39,7 @@ const works = [
       'Cloud',
       'Database',
     ],
-    year: '2024',
+    year: '2023',
     to: '/project/shareMe'
   },
   {
@@ -62,11 +63,11 @@ const works = [
       'Full-stack',
       'API',
     ],
-    year: '2024',
+    year: '2022',
     to: 'https://cryptoguidehq.web.app/'
   },
 ]
-
+ 
 const AppsSection = () => {
   const applicationsRef = useRef(null);
   const setAppSectRef = useHomeStore((state) => state.setAppSectRef);
@@ -91,7 +92,8 @@ export default AppsSection;
 
 const WorkContainer = ({work, end}) => {
   const workContainerRef = useRef(null);
-  const addToWorkContRefs = useHomeStore((state) => state.addToWorkContRefs);
+  const addToWorkContRefs = useHomeStore((state) => state.addToWorkContRefs); 
+  const isMobile = useIsMobile();
 
   const router = useRouter()
   
@@ -102,11 +104,13 @@ const WorkContainer = ({work, end}) => {
       addToWorkContRefs(workContainerRef.current);
     }
     if (dropAudioRef?.current) {
-      dropAudioRef.current.volume = 0.8;
+      dropAudioRef.current.volume = 0.6;
     }
   }, [workContainerRef, addToWorkContRefs]);
   
   const playDropSound = () => {
+    if(isMobile) return;
+    
     if (dropAudioRef?.current) {
       dropAudioRef.current.play();
     }

@@ -13,7 +13,7 @@ const Comment = ({ comment, index }) => {
   useEffect(() => {
     if (isInView) {
       setActiveCommentIndex(index)
-    }
+    } 
   }, [isInView])
 
   

@@ -21,3 +21,24 @@
     height: max-content;
     object-fit: cover;
 }
+
+
+/* Tab */
+@media (max-width: 992px) {
+    
+.demo-wrapper {
+    height: max-content;
+}
+
+.demoPlaceholderImg {
+    width: 100%;
+    height: max-content;
+    object-fit: cover;
+    transform: scale(1.4);
+}
+
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+}

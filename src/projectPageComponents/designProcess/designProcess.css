@@ -1,12 +1,11 @@
-
 .designProcess-wrapper {
     width: 100%;
-    
+
     height: max-content;
     /* min-height: 100vh; */
     box-sizing: border-box;
     background-color: var(--bg-light-color);
-    
+
     padding: var(--page-padding);
     display: flex;
     flex-direction: column;
@@ -188,6 +187,7 @@
     flex-direction: column;
     gap: .3rem;
 }
+
 .scenario-image-label {
     font-size: .8rem;
     font-weight: 700;
@@ -200,5 +200,114 @@
 .scenarioDesc {
     font-size: 12px;
     text-align: center;
-    /* width: 80%; */
+}
+
+
+
+
+
+/* Tab */
+@media (max-width: 992px) {
+
+    .designProcess-wrapper {
+        padding: 3rem;
+        gap: 2rem;
+    }
+
+    .client-persona-wrapper {
+        height: max-content;
+        min-height: 30vh;
+        width: 100%;
+        padding: 2rem .5rem;
+    }
+
+
+    .personaImg {
+        width: 110px;
+    }
+
+    .persona-header {
+        font-size: .9rem;
+    }
+
+    .persona-description {
+        font-size: .8rem;
+    }
+
+    
+    .wireframes-wrapper {
+        gap: 3.5rem;
+    }
+
+    .scenario-content {
+        height: max-content;
+    }
+
+    .scenario-images-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 2rem;
+    }
+
+    .scenario-images-container.chef {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .scenarioDesc {
+        font-size: 11px;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+
+    .personas-container {
+        justify-content: center;
+        gap: 3rem;
+        padding: 1rem;
+
+        flex-direction: column;
+    }
+
+
+    .client-persona-wrapper {
+        padding: 1rem .5rem;
+    }
+
+
+    .personaImg {
+        width: 90px;
+    }
+
+    .persona-header {
+        font-size: .8rem;
+    }
+
+    .persona-description {
+        font-size: .7rem;
+    }
+
+
+    .wireframes-wrapper {
+        gap: 3.5rem;
+    }
+
+
+
+    .scenario-label {
+        font-size: .9rem;
+    }
+
+    .scenario-images-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .scenario-images-container.chef {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .scenarioDesc {
+        font-size: 10px;
+    }
+
 }
