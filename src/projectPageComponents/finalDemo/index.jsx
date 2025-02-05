@@ -1,6 +1,7 @@
 
 import Image from 'next/image';
 import './finalDemo.css';
+import Link from 'next/link';
 
 const FinalDemo = ({ demoImg, live, prevProject, nextProject }) => {
   return (
@@ -16,17 +17,17 @@ const FinalDemo = ({ demoImg, live, prevProject, nextProject }) => {
       </div>
       <div className="demo-nextProject">
         {prevProject && (
-          <a href={`/project/${prevProject}`} className="prev-project">
+          <Link href={`/project/${prevProject}`} className="prev-project">
           <p>Previous Project: <span className='projectName'>{prevProject}</span></p>
-        </a>
+        </Link>
         )}
         <a href={live} target="_blank" rel="noopener noreferrer" className="liveDemo-container">
           <p>Live Demo</p>
         </a>
         {nextProject && (
-          <a href={`/project/${nextProject}`} className="next-project">
+          <Link href={`/project/${nextProject}`} className="next-project">
           <p>Next Project: <span className='projectName'>{nextProject}</span></p>
-        </a>
+        </Link>
         )}
       </div>
     </div>

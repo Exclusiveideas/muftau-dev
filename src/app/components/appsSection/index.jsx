@@ -1,10 +1,11 @@
 import Image from "next/image";
 import "./appsSection.css";
 import JellyBlob from "../cursorCircle";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import useHomeStore from "@/store/homeStore";
 import { useRouter } from "next/navigation";
 import useIsMobile from "@/utils/hooks/useIsMobile";
+import Link from "next/link";
 
 const works = [
   {
@@ -17,7 +18,7 @@ const works = [
       'Database',
     ],
     year: '2024',
-    to: '/project/homeMade'
+    to: 'homeMade'
   },
   {
     name: 'HavenHub - Real Estate Marketplace',
@@ -28,7 +29,7 @@ const works = [
       'Database',
     ],
     year: '2024',
-    to: '/project/havenhub'
+    to: 'havenhub'
   },
   {
     name: 'ShareMe - Social Media',
@@ -40,7 +41,7 @@ const works = [
       'Database',
     ],
     year: '2023',
-    to: '/project/shareMe'
+    to: 'shareMe'
   },
   {
     name: 'AATU - University Portal',
@@ -52,7 +53,7 @@ const works = [
       'QA Specialist',
     ],
     year: '2024',
-    to: '/project/aatu'
+    to: 'aatu'
   },
   {
     name: 'Crypto-Guide HQ',
@@ -64,7 +65,7 @@ const works = [
       'API',
     ],
     year: '2022',
-    to: '/project/cryptoHQ'
+    to: 'cryptoHQ'
   },
 ]
  
@@ -94,6 +95,8 @@ const WorkContainer = ({work, end}) => {
   const workContainerRef = useRef(null);
   const addToWorkContRefs = useHomeStore((state) => state.addToWorkContRefs); 
   const isMobile = useIsMobile();
+  const [location, setLocation] = useState(work?.to)
+
 
   const router = useRouter()
   
@@ -116,13 +119,9 @@ const WorkContainer = ({work, end}) => {
     }
   };
 
-  const goToApp = () => {
-    router.push(work?.to)
-  }
-
 
   return (
-    <div ref={workContainerRef} onClick={goToApp} onMouseEnter={playDropSound} className={`workContainer ${end && 'end'}`}>
+    <Link href={`/project/${work?.to}`} ref={workContainerRef}  onMouseEnter={playDropSound} className={`workContainer ${end && 'end'}`}>
       <audio
       ref={dropAudioRef}
       src="/sfx/drop.mp3"
@@ -145,6 +144,6 @@ const WorkContainer = ({work, end}) => {
         </div>
         <p className="work-year">{work?.year}</p>
       </div>
-    </div>
+    </Link>
   );
 };
